@@ -29,23 +29,25 @@ extension ConverterViewController: ConverterViewDelegate{
     func converterView(view: ConverterView, convertFroward value: String?) {
 //попробуем извлеч число из строки
         guard let rubText = value,
-        let rubles = Double (rubText)
+        let rubles = Double (rubText.filterForNumberConvertion)
         else {
+            view.fromValue = "Ошибка :("
             return
         }
 //        пересчитаем валюту из рублей
         let euroes = converter.convertForward(amount: rubles)
 //        запишем новое значение в правое поле для ввода
-        view.fromValue = "\(euroes)"
+        view.fromValue = "\(euroes) €"
     }
     
     func converterView(view: ConverterView, convertBackward value: String?) {
         guard let euroText = value,
-        let euroes = Double(euroText)
+        let euroes = Double(euroText.filterForNumberConvertion)
             else {
+            view.toValue = ":("
             return
         }
         let rubles = converter.convertBackward(amount: euroes)
-        view.toValue = "\(rubles)"
+        view.toValue = "\(rubles) ₽"
     }
 }

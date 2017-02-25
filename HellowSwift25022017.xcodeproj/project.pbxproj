@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63580D281E618D9B00C983A8 /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63580D271E618D9B00C983A8 /* ConverterViewController.swift */; };
+		63580D2A1E618DCB00C983A8 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63580D291E618DCB00C983A8 /* Converter.swift */; };
+		63580D2C1E618DF900C983A8 /* ConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63580D2B1E618DF900C983A8 /* ConverterView.swift */; };
 		638BC0591E617001006EBCB2 /* HellowSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638BC0581E617001006EBCB2 /* HellowSwiftViewController.swift */; };
 		63C197FC1E6165FB00253536 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C197FB1E6165FB00253536 /* AppDelegate.swift */; };
 		63C198011E6165FB00253536 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C197FF1E6165FB00253536 /* Main.storyboard */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63580D271E618D9B00C983A8 /* ConverterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
+		63580D291E618DCB00C983A8 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		63580D2B1E618DF900C983A8 /* ConverterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterView.swift; sourceTree = "<group>"; };
 		638BC0581E617001006EBCB2 /* HellowSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HellowSwiftViewController.swift; sourceTree = "<group>"; };
 		63C197F81E6165FB00253536 /* HellowSwift25022017.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HellowSwift25022017.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63C197FB1E6165FB00253536 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +41,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63580D2D1E618E2600C983A8 /* Converter */ = {
+			isa = PBXGroup;
+			children = (
+				63580D271E618D9B00C983A8 /* ConverterViewController.swift */,
+				63580D291E618DCB00C983A8 /* Converter.swift */,
+				63580D2B1E618DF900C983A8 /* ConverterView.swift */,
+			);
+			name = Converter;
+			sourceTree = "<group>";
+		};
+		63580D2E1E618E4E00C983A8 /* HellowSwift */ = {
+			isa = PBXGroup;
+			children = (
+				638BC0581E617001006EBCB2 /* HellowSwiftViewController.swift */,
+			);
+			name = HellowSwift;
+			sourceTree = "<group>";
+		};
 		63C197EF1E6165FB00253536 = {
 			isa = PBXGroup;
 			children = (
@@ -54,9 +78,10 @@
 		63C197FA1E6165FB00253536 /* HellowSwift25022017 */ = {
 			isa = PBXGroup;
 			children = (
-				638BC0581E617001006EBCB2 /* HellowSwiftViewController.swift */,
+				63580D2E1E618E4E00C983A8 /* HellowSwift */,
 				63C197FB1E6165FB00253536 /* AppDelegate.swift */,
 				63C197FF1E6165FB00253536 /* Main.storyboard */,
+				63580D2D1E618E2600C983A8 /* Converter */,
 				63C198021E6165FB00253536 /* Assets.xcassets */,
 				63C198041E6165FB00253536 /* LaunchScreen.storyboard */,
 				63C198071E6165FB00253536 /* Info.plist */,
@@ -139,6 +164,9 @@
 			files = (
 				63C197FC1E6165FB00253536 /* AppDelegate.swift in Sources */,
 				638BC0591E617001006EBCB2 /* HellowSwiftViewController.swift in Sources */,
+				63580D2A1E618DCB00C983A8 /* Converter.swift in Sources */,
+				63580D2C1E618DF900C983A8 /* ConverterView.swift in Sources */,
+				63580D281E618D9B00C983A8 /* ConverterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

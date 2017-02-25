@@ -32,4 +32,4 @@ private func roundValue(amount:Double, precision:Int)->Double{
         return newValue / multiply
     }
 }
-Converter(forwardRatio: 1 / 61.9, backwardRatio: 58.3, precision: 2)
+

@@ -40,7 +40,7 @@ class ConverterView: UIView {
     @IBOutlet private weak var fromTextField:UITextField?
     
     @IBAction func forwardPressed(){
-        delegate?.converterView(view: self, convertFroward: fromValue)
+        delegate?.converterView(view: self, convertFroward: toValue)
     }
     @IBAction func backwardPressed(){
         delegate?.converterView(view: self, convertBackward: fromValue)

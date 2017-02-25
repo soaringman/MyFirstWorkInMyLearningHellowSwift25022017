@@ -36,8 +36,17 @@ class ConverterView: UIView {
         }
     }
     //    привяжим два текстовых поля
-    @IBOutlet private weak var toTextField:UITextField?
-    @IBOutlet private weak var fromTextField:UITextField?
+    @IBOutlet private weak var toTextField:UITextField?{
+        didSet {
+            toTextField?.delegate = self
+        }
+    }
+    
+    @IBOutlet private weak var fromTextField:UITextField?{
+        didSet {
+            fromTextField?.delegate = self
+        }
+    }
     
     @IBAction func forwardPressed(){
         delegate?.converterView(view: self, convertFroward: toValue)
@@ -53,5 +62,14 @@ class ConverterView: UIView {
     private func setup(){
         self.layer.cornerRadius = 5
         self.clipsToBounds = true
+        
+        
     }
+    
+}
+
+
+extension ConverterView:UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = textField.text?.filterForNumberConvertion
 }

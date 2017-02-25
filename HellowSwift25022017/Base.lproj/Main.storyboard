@@ -86,7 +86,7 @@
         <!--Converter-->
         <scene sceneID="kWw-9f-tVz">
             <objects>
-                <viewController id="02Z-CL-pRb" sceneMemberID="viewController">
+                <viewController id="02Z-CL-pRb" customClass="ConverterViewController" customModule="HellowSwift25022017" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6ua-gn-tKl"/>
                         <viewControllerLayoutGuide type="bottom" id="lvz-qt-peE"/>
@@ -173,6 +173,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Converter" id="zxQ-G3-4RV"/>
+                    <connections>
+                        <outlet property="ConverterView" destination="T9S-Yu-PX0" id="fX9-yf-nKr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqU-1b-boE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

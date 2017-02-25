@@ -95,7 +95,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9S-Yu-PX0" userLabel="ConverterView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9S-Yu-PX0" userLabel="ConverterView" customClass="ConverterView" customModule="HellowSwift25022017" customModuleProvider="target">
                                 <rect key="frame" x="36" y="60" width="303" height="86"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Brl-ht-ST9">
@@ -103,6 +103,7 @@
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Рубли" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xCq-ll-Y2d">
                                                 <rect key="frame" x="0.0" y="20" width="108.5" height="30"/>
+                                                <color key="backgroundColor" red="0.80874680996870207" green="0.8397488628040789" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -119,6 +120,9 @@
                                                             <color key="titleColor" red="0.039865232919168506" green="0.04449394242904426" blue="0.084248249086073645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="titleShadowColor" red="0.93421181773892337" green="0.55436283852757617" blue="0.92284359299013119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="forwardPressed" destination="T9S-Yu-PX0" eventType="touchUpInside" id="3Gt-pa-b6L"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNY-IL-VSb">
                                                         <rect key="frame" x="0.0" y="40" width="50" height="30"/>
@@ -129,11 +133,15 @@
                                                             <color key="titleColor" red="0.039865232919168506" green="0.04449394242904426" blue="0.084248249086073645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <color key="titleShadowColor" red="0.93421181773892337" green="0.55436283852757617" blue="0.92284359299013119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="backwardPressed" destination="T9S-Yu-PX0" eventType="touchUpInside" id="Itg-ww-9ka"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Евро" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Afi-Fz-7ct">
                                                 <rect key="frame" x="178.5" y="20" width="108.5" height="30"/>
+                                                <color key="backgroundColor" red="0.82108986889765467" green="0.83495979795251452" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -151,6 +159,10 @@
                                     <constraint firstItem="Brl-ht-ST9" firstAttribute="top" secondItem="T9S-Yu-PX0" secondAttribute="topMargin" id="CSV-mx-7ga"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Brl-ht-ST9" secondAttribute="trailing" id="Pk0-bj-Tr9"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="fromTextField" destination="Afi-Fz-7ct" id="NdR-W0-yP7"/>
+                                    <outlet property="toTextField" destination="xCq-ll-Y2d" id="u5g-Ba-bMu"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.92693146398785398" green="0.89240061466220488" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

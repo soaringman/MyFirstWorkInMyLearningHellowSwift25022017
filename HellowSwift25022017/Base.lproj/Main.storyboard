@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -93,13 +94,77 @@
                     <view key="view" contentMode="scaleToFill" id="tgh-dZ-tFL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T9S-Yu-PX0" userLabel="ConverterView">
+                                <rect key="frame" x="36" y="60" width="303" height="86"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Brl-ht-ST9">
+                                        <rect key="frame" x="8" y="8" width="287" height="70"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Рубли" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xCq-ll-Y2d">
+                                                <rect key="frame" x="0.0" y="20" width="108.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wph-Hy-Axa">
+                                                <rect key="frame" x="118.5" y="0.0" width="50" height="70"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaH-hN-1De">
+                                                        <rect key="frame" x="0.0" y="0.0" width="50" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="cc0-sn-gaP"/>
+                                                        </constraints>
+                                                        <state key="normal" title="--&gt;">
+                                                            <color key="titleColor" red="0.039865232919168506" green="0.04449394242904426" blue="0.084248249086073645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" red="0.93421181773892337" green="0.55436283852757617" blue="0.92284359299013119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNY-IL-VSb">
+                                                        <rect key="frame" x="0.0" y="40" width="50" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="50" id="oAz-ij-0Ws"/>
+                                                        </constraints>
+                                                        <state key="normal" title="&lt;--">
+                                                            <color key="titleColor" red="0.039865232919168506" green="0.04449394242904426" blue="0.084248249086073645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleShadowColor" red="0.93421181773892337" green="0.55436283852757617" blue="0.92284359299013119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Евро" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Afi-Fz-7ct">
+                                                <rect key="frame" x="178.5" y="20" width="108.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Afi-Fz-7ct" firstAttribute="width" secondItem="xCq-ll-Y2d" secondAttribute="width" id="20z-4B-pDs"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="Brl-ht-ST9" firstAttribute="leading" secondItem="T9S-Yu-PX0" secondAttribute="leadingMargin" id="2jE-hT-Tgy"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="Brl-ht-ST9" secondAttribute="bottom" id="4Go-QI-jaj"/>
+                                    <constraint firstItem="Brl-ht-ST9" firstAttribute="top" secondItem="T9S-Yu-PX0" secondAttribute="topMargin" id="CSV-mx-7ga"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Brl-ht-ST9" secondAttribute="trailing" id="Pk0-bj-Tr9"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92693146398785398" green="0.89240061466220488" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T9S-Yu-PX0" firstAttribute="top" secondItem="6ua-gn-tKl" secondAttribute="bottom" constant="40" id="EM6-kd-hm5"/>
+                            <constraint firstItem="T9S-Yu-PX0" firstAttribute="leading" secondItem="tgh-dZ-tFL" secondAttribute="leadingMargin" constant="20" id="EkL-MT-Q6b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T9S-Yu-PX0" secondAttribute="trailing" constant="20" id="lNl-tb-nKz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Converter" id="zxQ-G3-4RV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BqU-1b-boE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="850"/>
+            <point key="canvasLocation" x="136.80000000000001" y="849.62518740629696"/>
         </scene>
     </scenes>
 </document>

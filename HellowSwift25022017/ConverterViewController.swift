@@ -39,7 +39,13 @@ extension ConverterViewController: ConverterViewDelegate{
         view.fromValue = "\(euroes)"
     }
     
-    func converterView(view: ConverterView, convertBackward lavue: String?) {
-        
+    func converterView(view: ConverterView, convertBackward value: String?) {
+        guard let euroText = value,
+        let euroes = Double(euroText)
+            else {
+            return
+        }
+        let rubles = converter.convertBackward(amount: euroes)
+        view.toValue = "\(rubles)"
     }
 }
